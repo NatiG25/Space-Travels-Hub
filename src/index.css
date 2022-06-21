@@ -1,15 +1,30 @@
 nav {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
-nav a {
+.left-section a {
+  padding-right: 10px;
+}
+
+.nav a {
   text-decoration: none;
   color: black;
 }
 
-nav a.active {
+.nav a.active {
   text-decoration: underline;
   color: blue;
+}
+
+.imgPlanet {
+  height: auto;
+  width: 80px;
 }
