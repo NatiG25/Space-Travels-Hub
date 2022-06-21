@@ -4,6 +4,27 @@ nav {
   gap: 10px;
 }
 
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  border-bottom: 2px solid gray;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0 5px;
+}
+
+.logoTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+
 nav a {
   text-decoration: none;
   color: black;
@@ -12,4 +33,9 @@ nav a {
 nav a.active {
   text-decoration: underline;
   color: blue;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
 }
