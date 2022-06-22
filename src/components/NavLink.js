@@ -4,10 +4,10 @@ import planet from '../images/planet.png';
 
 const NavLink = () => (
   <div className="navContainer">
-    <di className="logoContainer">
+    <div className="logoContainer">
       <img src={planet} alt="Planet" className="logo" />
       <p className="logoTitle">Space Travelers Hub</p>
-    </di>
+    </div>
     <nav>
       <Link to="/">MyProfile</Link>
       <Link to="/Rockets">Rockets</Link>
