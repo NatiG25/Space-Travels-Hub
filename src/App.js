@@ -10,8 +10,8 @@ function App() {
     <>
       <NavLink />
       <Routes>
-        <Route path="/" element={<MyProfile />} />
-        <Route path="/Rockets" element={<Rockets />} />
+        <Route path="/MyProfile" element={<MyProfile />} />
+        <Route path="/" element={<Rockets />} />
         <Route path="/Missions" element={<Missions />} />
       </Routes>
     </>
