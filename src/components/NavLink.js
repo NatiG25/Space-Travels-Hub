@@ -3,17 +3,17 @@ import { NavLink as Link } from 'react-router-dom';
 import planet from '../images/planet.png';
 
 const NavLink = () => (
-  <div className="navContainer">
-    <div className="logoContainer">
-      <img src={planet} alt="Planet" className="logo" />
-      <p className="logoTitle">Space Travelers Hub</p>
+  <nav className="nav">
+    <div className="right-section">
+      <img src={planet} className="imgPlanet" alt="Planet" />
+      <h1>Space Travelers Hub</h1>
     </div>
-    <nav>
-      <Link to="/">MyProfile</Link>
-      <Link to="/Rockets">Rockets</Link>
+    <div className="left-section">
+      <Link to="/">Rockets</Link>
       <Link to="/Missions">Missions</Link>
-    </nav>
-  </div>
+      <Link to="/MyProfile">MyProfile</Link>
+    </div>
+  </nav>
 );
 
 export default NavLink;
