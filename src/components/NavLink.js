@@ -9,9 +9,9 @@ const NavLink = () => (
       <h1>Space Travelers Hub</h1>
     </div>
     <div className="left-section">
-      <Link to="/">Rockets</Link>
+      <Link to="/">MyProfile</Link>
+      <Link to="/Rockets">Rockets</Link>
       <Link to="/Missions">Missions</Link>
-      <Link to="/MyProfile">MyProfile</Link>
     </div>
   </nav>
 );
