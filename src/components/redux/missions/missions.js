@@ -1,9 +1,10 @@
-const missionsURL = 'https://api.spacexdata.com/v3/missions';
+// Action Types
 const GET_MISSIONS = 'GET_MISSIONS';
 
 // Action Creaters
 const getMissions = (payload) => ({ type: GET_MISSIONS, payload });
 
+const missionsURL = 'https://api.spacexdata.com/v3/missions';
 export const fetchMission = () => async (dispatch) => {
   const res = await fetch(missionsURL);
   const resJSON = await res.json();
@@ -14,6 +15,7 @@ export const fetchMission = () => async (dispatch) => {
   return dispatch(getMissions(missionsAll));
 };
 
+// Reducers
 const missionReducer = (state = [], action) => {
   switch (action.type) {
     case GET_MISSIONS:
