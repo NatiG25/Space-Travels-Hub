@@ -1,26 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Mission = ({ missionName, description }) => {
+const Mission = ({ missionName }) => {
   Mission.propTypes = {
     missionName: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    // description: PropTypes.string.isRequired,
   };
 
   return (
-    <main>
-      <section className="missionsSection">
-        <h2>Mission</h2>
+    <>
+      <section className="missionSection">
         <p>{missionName}</p>
+        {/* <div className="descriptionSection">
+          <p>{description}</p>
+        </div>
+        <div>
+          <p>Status</p>
+        </div> */}
       </section>
-      <section className="descriptionSection">
-        <h2>Description</h2>
-        <p>{description}</p>
-      </section>
-      {/* <section className="statusSection">
-      <h2>Status</h2>
-    </section> */}
-    </main>
+    </>
   );
 };
 
