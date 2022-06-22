@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMission } from './redux/missions/missions';
+import Mission from './Mission';
+import { fetchMission, joinMission } from './redux/missions/missions';
 
 const Missions = () => {
   const missionInfo = useSelector((state) => state.missionInfo);
@@ -9,6 +10,10 @@ const Missions = () => {
   useEffect(() => {
     dispatch(fetchMission());
   }, []);
+
+  const joinMissionHandler = (id) => {
+    dispatch(joinMission(id));
+  };
 
   return (
     <main>
@@ -19,18 +24,14 @@ const Missions = () => {
             <th>Description</th>
             <th>Status</th>
           </tr>
-          {missionInfo.length === 0
-            ? 'no missions'
-            : missionInfo.map((item) => (
-              <>
-                <tr key={item.mission_id}>
-                  <td>{item.mission_name}</td>
-                  <td>{item.description}</td>
-                  <td>Status</td>
-                  <td style={{ width: '7.5%', textAlign: 'center' }}><a className="joinMission" href="/">Join Mission</a></td>
-                </tr>
-              </>
-            ))}
+          {missionInfo.map((item) => (
+            <Mission
+              key={item.mission_id}
+              missionName={item.mission_name}
+              description={item.description}
+              joinMissionHandler={() => joinMissionHandler(item.mission_id)}
+            />
+          ))}
         </tbody>
       </table>
     </main>
