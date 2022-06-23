@@ -6,14 +6,18 @@ const Mission = ({
   description,
   joinMissionHandler,
   cancelMissionHandler,
-  reserveHandler,
+  reservation,
 }) => {
   Mission.propTypes = {
     missionName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reservation: PropTypes.bool,
     joinMissionHandler: PropTypes.func.isRequired,
     cancelMissionHandler: PropTypes.func.isRequired,
-    reserveHandler: PropTypes.func.isRequired,
+  };
+
+  Mission.defaultProps = {
+    reservation: false,
   };
 
   return (
@@ -21,27 +25,29 @@ const Mission = ({
       <tr>
         <td>{missionName}</td>
         <td>{description}</td>
-        <td>Status</td>
+        <td className="status">{reservation ? 'ACTIVE MEMEBR' : 'NOT A MEMEBR'}</td>
         <td style={{ width: '7.5%', textAlign: 'center' }}>
-          {reserveHandler ? (
-            <button
-              type="button"
-              className="reservation"
-              href="."
-              onClick={cancelMissionHandler}
-            >
-              Cancel Mission
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="reservation"
-              href="."
-              onClick={joinMissionHandler}
-            >
-              Join Mission
-            </button>
-          )}
+          {reservation
+            ? (
+              <button
+                type="button"
+                className="reservation"
+                href="."
+                onClick={cancelMissionHandler}
+              >
+                Cancel Mission
+              </button>
+            )
+            : (
+              <button
+                type="button"
+                className="reservation"
+                href="."
+                onClick={joinMissionHandler}
+              >
+                Join Mission
+              </button>
+            )}
         </td>
       </tr>
     </>

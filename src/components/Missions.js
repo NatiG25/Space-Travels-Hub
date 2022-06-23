@@ -4,9 +4,7 @@ import Mission from './Mission';
 import { fetchMission, joinMission, cancelMission } from './redux/missions/missions';
 
 const Missions = () => {
-  const missionInfo = useSelector((state) => state.missionInfo);
-  console.log(missionInfo.filter((info) => info.reserved === true));
-  // console.log(missionInfo);
+  const missionInfo = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMission());
@@ -34,6 +32,7 @@ const Missions = () => {
               key={item.mission_id}
               missionName={item.mission_name}
               description={item.description}
+              reservation={item.reserved}
               joinMissionHandler={() => joinMissionHandler(item.mission_id)}
               cancelMissionHandler={() => cancelMissionHandler(item.mission_id)}
             />
