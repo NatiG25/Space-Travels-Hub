@@ -1,29 +1,22 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function RocketContainer({ image, name, description }) {
-  // const dispatch = useDispatch();
-
-  return (
-    <div className="rocketContainer">
-      <div className="imageContainer">
-        <img src={image} alt="rocket" className="image" />
-      </div>
-      <div className="rocketDetails">
-        <h3 className="rocketName">{name}</h3>
-        <p className="rocketDescription">{description}</p>
-        <button type="button" className="rocketButton">Reserve Rocket</button>
-      </div>
+const RocketContainer = ({ image, name, description }) => (
+  <section className="rockeContainer">
+    <div>
+      <img src={image} alt={name} />
     </div>
-  );
-}
+    <div>
+      <h2>{name}</h2>
+      <p>{description}</p>
+      <button type="button">Reserve rocket</button>
+    </div>
+  </section>
+);
+export default RocketContainer;
 
 RocketContainer.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
-
-export default RocketContainer;

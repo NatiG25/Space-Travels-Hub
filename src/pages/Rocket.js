@@ -1,25 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import fetchRockets from '../api/fetchRocketData';
+import { fetchRockets } from '../api/fetchRocketData';
 import RocketContainer from '../components/Rockets';
-import { getRockets } from '../components/redux/rockets/rockets';
 
-function Rockets() {
+const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function data() {
-      const rockets = await fetchRockets();
-      dispatch(getRockets(rockets));
-    }
-    data();
+    dispatch(fetchRockets());
   }, []);
-
-  const rockets = useSelector((state) => state.rockets);
-
+  const rocketInfo = useSelector((state) => state.rocketInfo);
   return (
     <>
-      {rockets.map((rocket) => (
+      {rocketInfo.map((rocket) => (
         <RocketContainer
           key={rocket.id}
           name={rocket.rocket_name}
@@ -29,6 +22,6 @@ function Rockets() {
       ))}
     </>
   );
-}
+};
 
 export default Rockets;
