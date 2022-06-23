@@ -28,19 +28,3 @@ nav {
   height: auto;
   width: 80px;
 }
-
-.tableMissions,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-.reservation {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid black;
-}
