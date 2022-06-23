@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Rockets.css';
 
 const RocketContainer = ({ image, name, description }) => (
-  <section className="rockeContainer">
+  <section className="rocket">
     <div>
       <img src={image} alt={name} />
     </div>
