@@ -5,6 +5,8 @@ import { fetchMission, joinMission, cancelMission } from './redux/missions/missi
 
 const Missions = () => {
   const missionInfo = useSelector((state) => state.missionInfo);
+  console.log(missionInfo.filter((info) => info.reserved === true));
+  // console.log(missionInfo);
   const dispatch = useDispatch();
 
   useEffect(() => {

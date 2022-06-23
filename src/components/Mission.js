@@ -21,22 +21,25 @@ const Mission = ({
         <td>{description}</td>
         <td>Status</td>
         <td style={{ width: '7.5%', textAlign: 'center' }}>
-          <button
-            type="button"
-            className="reservation"
-            href="."
-            onClick={joinMissionHandler}
-          >
-            Join Mission
-          </button>
-          <button
-            type="button"
-            className="reservation"
-            href="."
-            onClick={cancelMissionHandler}
-          >
-            Cancel Mission
-          </button>
+          {reserved ? (
+            <button
+              type="button"
+              className="reservation"
+              href="."
+              onClick={joinMissionHandler}
+            >
+              Join Mission
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="reservation"
+              href="."
+              onClick={cancelMissionHandler}
+            >
+              Cancel Mission
+            </button>
+          )}
         </td>
       </tr>
     </>
@@ -44,3 +47,19 @@ const Mission = ({
 };
 
 export default Mission;
+// <button
+//   type="button"
+//   className="reservation"
+//   href="."
+//   onClick={joinMissionHandler}
+// >
+//   Join Mission
+// </button>
+// <button
+//   type="button"
+//   className="reservation"
+//   href="."
+//   onClick={cancelMissionHandler}
+// >
+//   Cancel Mission
+// </button>
