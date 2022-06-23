@@ -1,26 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Mission = ({ missionName, description }) => {
+const Mission = ({
+  missionName,
+  description,
+  joinMissionHandler,
+  cancelMissionHandler,
+}) => {
   Mission.propTypes = {
     missionName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    joinMissionHandler: PropTypes.func.isRequired,
+    cancelMissionHandler: PropTypes.func.isRequired,
   };
 
   return (
-    <main>
-      <section className="missionsSection">
-        <h2>Mission</h2>
-        <p>{missionName}</p>
-      </section>
-      <section className="descriptionSection">
-        <h2>Description</h2>
-        <p>{description}</p>
-      </section>
-      {/* <section className="statusSection">
-      <h2>Status</h2>
-    </section> */}
-    </main>
+    <>
+      <tr>
+        <td>{missionName}</td>
+        <td>{description}</td>
+        <td>Status</td>
+        <td style={{ width: '7.5%', textAlign: 'center' }}>
+          <button
+            type="button"
+            className="reservation"
+            href="."
+            onClick={joinMissionHandler}
+          >
+            Join Mission
+          </button>
+          <button
+            type="button"
+            className="reservation"
+            href="."
+            onClick={cancelMissionHandler}
+          >
+            Cancel Mission
+          </button>
+        </td>
+      </tr>
+    </>
   );
 };
 
