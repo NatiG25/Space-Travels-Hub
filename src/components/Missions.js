@@ -8,7 +8,6 @@ const Missions = () => {
   console.log(missionInfo.filter((info) => info.reserved === true));
   // console.log(missionInfo);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchMission());
   }, []);

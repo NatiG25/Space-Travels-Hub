@@ -6,12 +6,14 @@ const Mission = ({
   description,
   joinMissionHandler,
   cancelMissionHandler,
+  reserveHandler,
 }) => {
   Mission.propTypes = {
     missionName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     joinMissionHandler: PropTypes.func.isRequired,
     cancelMissionHandler: PropTypes.func.isRequired,
+    reserveHandler: PropTypes.func.isRequired,
   };
 
   return (
@@ -21,16 +23,7 @@ const Mission = ({
         <td>{description}</td>
         <td>Status</td>
         <td style={{ width: '7.5%', textAlign: 'center' }}>
-          {reserved ? (
-            <button
-              type="button"
-              className="reservation"
-              href="."
-              onClick={joinMissionHandler}
-            >
-              Join Mission
-            </button>
-          ) : (
+          {reserveHandler ? (
             <button
               type="button"
               className="reservation"
@@ -38,6 +31,15 @@ const Mission = ({
               onClick={cancelMissionHandler}
             >
               Cancel Mission
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="reservation"
+              href="."
+              onClick={joinMissionHandler}
+            >
+              Join Mission
             </button>
           )}
         </td>
@@ -47,19 +49,3 @@ const Mission = ({
 };
 
 export default Mission;
-// <button
-//   type="button"
-//   className="reservation"
-//   href="."
-//   onClick={joinMissionHandler}
-// >
-//   Join Mission
-// </button>
-// <button
-//   type="button"
-//   className="reservation"
-//   href="."
-//   onClick={cancelMissionHandler}
-// >
-//   Cancel Mission
-// </button>

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import NavLink from './components/NavLink';
-import Rockets from './components/Rockets';
+import Rocket from './components/Rocket';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <NavLink />
       <Routes>
         <Route path="/MyProfile" element={<MyProfile />} />
-        <Route path="/" element={<Rockets />} />
+        <Route path="/" element={<Rocket />} />
         <Route path="/Missions" element={<Missions />} />
       </Routes>
     </>
