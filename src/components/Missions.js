@@ -32,6 +32,7 @@ const Missions = () => {
               key={item.mission_id}
               missionName={item.mission_name}
               description={item.description}
+              reservation={item.reserved}
               joinMissionHandler={() => joinMissionHandler(item.mission_id)}
               cancelMissionHandler={() => cancelMissionHandler(item.mission_id)}
             />
