@@ -9,7 +9,7 @@ const Rockets = () => {
     dispatch(fetchRockets());
   }, []);
   const rocketInfo = useSelector((state) => state.rocketReducer);
-  // console.log(rocketInfo);
+  console.log(rocketInfo);
 
   const reserveRocketHandler = (id) => {
     dispatch(reserveRocket(id));
@@ -27,8 +27,9 @@ const Rockets = () => {
           name={rocket.rocket_name}
           description={rocket.description}
           image={rocket.flickr_images[0]}
-          reserveRocketHandler={() => reserveRocketHandler(rocket.rocket_id)}
-          cancelRocketHandle={() => cancelRocketHandler(rocket.rocket_id)}
+          reserved={rocket.reserved}
+          reserveRocketHandler={() => reserveRocketHandler(rocket.id)}
+          cancelRocketHandler={() => cancelRocketHandler(rocket.id)}
         />
       ))}
     </>

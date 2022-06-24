@@ -26,7 +26,11 @@ RocketContainer.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  reserved: PropTypes.bool.isRequired,
+  reserved: PropTypes.bool,
   reserveRocketHandler: PropTypes.func.isRequired,
   cancelRocketHandler: PropTypes.func.isRequired,
+};
+
+RocketContainer.defaultProps = {
+  reserved: false,
 };
