@@ -1,0 +1,27 @@
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  gap: 50px;
+  text-align: left;
+}
+
+h2 {
+  margin-left: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.missionContainer,
+.rocketContainer {
+  width: 45%;
+}
+
+li {
+  list-style-type: none;
+  min-height: 30px;
+  border: 2px solid #bcbcbc;
+  margin: 20px auto;
+  padding: 10px 0 0 10px;
+}
