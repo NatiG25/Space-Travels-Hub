@@ -20,7 +20,6 @@ const RocketContainer = ({
     </div>
   </section>
 );
-export default RocketContainer;
 
 RocketContainer.propTypes = {
   name: PropTypes.string.isRequired,
@@ -34,3 +33,5 @@ RocketContainer.propTypes = {
 RocketContainer.defaultProps = {
   reserved: false,
 };
+
+export default RocketContainer;

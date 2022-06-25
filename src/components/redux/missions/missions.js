@@ -4,7 +4,7 @@ const JOIN_MISSIONS = 'JOIN_MISSIONS';
 const CANCEL_MISSIONS = 'CANCEL_MISSIONS';
 
 // Action Creaters
-const getMissions = (payload) => ({ type: GET_MISSIONS, payload });
+export const getMissions = (payload) => ({ type: GET_MISSIONS, payload });
 export const joinMission = (id) => ({ type: JOIN_MISSIONS, id });
 export const cancelMission = (id) => ({ type: CANCEL_MISSIONS, id });
 

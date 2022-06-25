@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test all Missions components and functions renders Misssion correctly 1`] = `
+<tr
+  className="mission-row"
+>
+  <td />
+  <td />
+  <td
+    className="status"
+  >
+    <span
+      className="status-field unavailable-status"
+    >
+      Not a Member
+    </span>
+  </td>
+  <td>
+    <button
+      className="button-mission join-mission"
+      href="."
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Test all Missions components and functions renders Misssions correctly 1`] = `
+<main>
+  <table
+    className="tableMissions"
+  >
+    <tbody>
+      <tr>
+        <th>
+          Missions
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</main>
+`;
