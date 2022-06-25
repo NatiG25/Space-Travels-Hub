@@ -22,16 +22,21 @@ const Mission = ({
 
   return (
     <>
-      <tr>
+      <tr className="mission-row">
         <td>{missionName}</td>
         <td>{description}</td>
-        <td className="status">{reservation ? 'ACTIVE MEMEBR' : 'NOT A MEMEBR'}</td>
+        <td className="status">
+          {reservation
+            ? <span className="status-field available-status">Active Member</span>
+
+            : <span className="status-field unavailable-status">Not a Member</span> }
+        </td>
         <td style={{ width: '7.5%', textAlign: 'center' }}>
           {reservation
             ? (
               <button
                 type="button"
-                className="reservation"
+                className="button-mission leave-mission"
                 href="."
                 onClick={cancelMissionHandler}
               >
@@ -41,7 +46,7 @@ const Mission = ({
             : (
               <button
                 type="button"
-                className="reservation"
+                className="button-mission join-mission"
                 href="."
                 onClick={joinMissionHandler}
               >

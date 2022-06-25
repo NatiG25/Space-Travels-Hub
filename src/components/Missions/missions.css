@@ -1,15 +1,73 @@
 .tableMissions,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-collapse: collapse;
 }
 
-.reservation {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
+.mission-row {
+  background-color: lightgrey;
+}
+
+.mission-row:nth-child(even) {
+  background-color: #fff;
+}
+
+.status {
+  width: 12%;
+  text-align: center;
+}
+
+.status-field {
+  font-size: 0.8em;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: 800px;
+}
+
+.unavailable-status {
+  background: gray;
+}
+
+.available-status {
+  background: #1b90a8;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  margin: 30px auto;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.button-mission {
+  padding: 5px;
+  background: transparent;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid black;
+  width: 7rem;
+}
+
+.join-mission {
+  border: 1px solid gray;
+  color: gray;
+}
+
+.leave-mission {
+  border: 1px solid #cd142d;
+  color: #cd142d;
 }
