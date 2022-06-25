@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import Missions from '../components/Missions/Missions'
+import Missions from '../components/Missions/Missions';
 import Mission from '../components/Missions/Mission';
-import store from '../components/redux/configureStore'
+import store from '../components/redux/configureStore';
 
 describe('Test all Missions components and functions', () => {
   it('renders Misssions correctly', () => {
@@ -19,5 +19,4 @@ describe('Test all Missions components and functions', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-  
-})
+});
