@@ -31,7 +31,7 @@ const Mission = ({
 
             : <span className="status-field unavailable-status">Not a Member</span> }
         </td>
-        <td style={{ width: '7.5%', textAlign: 'center' }}>
+        <td>
           {reservation
             ? (
               <button
