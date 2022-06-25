@@ -2,7 +2,7 @@ import { joinMission } from '../components/redux/missions/missions';
 import { cancelMission } from '../components/redux/missions/missions';
 import { getMissions } from '../components/redux/missions/missions'
 import missionReducer from '../components/redux/missions/missions';
-import allMissions from './missionsAPI';
+import allMissions from './fakeAPI/missionsAPI';
 
 describe('Should return a new state with a reserved property', () => {
   it('Should return all of the missions', () => {

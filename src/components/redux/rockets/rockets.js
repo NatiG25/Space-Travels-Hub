@@ -4,7 +4,7 @@ const RESERVE_ROCKETS = 'RESERVE_ROCKETS';
 const CANCEL_ROCKETS = 'CANCEL_ROCKETS';
 
 // Action Creaters
-const getRockets = (payload) => ({ type: GET_ROCKETS, payload });
+export const getRockets = (payload) => ({ type: GET_ROCKETS, payload });
 export const reserveRocket = (id) => ({ type: RESERVE_ROCKETS, id });
 export const cancelRocket = (id) => ({ type: CANCEL_ROCKETS, id });
 

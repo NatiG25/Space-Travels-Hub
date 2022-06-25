@@ -1,3 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test all Rockets components and functions renders Rocket correctly 1`] = `null`;
+exports[`Test all Rockets components renders Rocket correctly 1`] = `null`;
+
+exports[`Test all Rockets components renders Rocket correctly 2`] = `
+<section
+  className="rocket"
+>
+  <div>
+    <img />
+  </div>
+  <div>
+    <h2 />
+    <p />
+    <button
+      className="book"
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</section>
+`;
