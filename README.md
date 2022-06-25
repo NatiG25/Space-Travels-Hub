@@ -57,9 +57,9 @@ To get a local copy up and running follow these simple example steps.
 - npm install --save-dev jest
 - npm test
 
-## Live Demo (Not available yet)
+## Live Demo
 
-- [Live Demo Link](https://livedemo.com)
+- [Live Demo Link](spacehub1.netlify.app)
 
 ## Author
 
