@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cancelRocket, fetchRockets, reserveRocket } from './redux/rockets/rockets';
+import { cancelRocket, fetchRockets, reserveRocket } from '../redux/rockets/rockets';
 import RocketContainer from './Rockets';
 
-const Rockets = () => {
+const Rocket = () => {
+  const rocketInfo = useSelector((state) => state.rocketReducer);
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (!rocketInfo.length) dispatch(fetchRockets());
   }, []);
-  const rocketInfo = useSelector((state) => state.rocketReducer);
 
   const reserveRocketHandler = (id) => {
     dispatch(reserveRocket(id));
@@ -34,4 +35,4 @@ const Rockets = () => {
     </>
   );
 };
-export default Rockets;
+export default Rocket;

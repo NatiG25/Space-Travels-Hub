@@ -5,7 +5,7 @@ import Missions from './components/Missions/Missions';
 import MyProfile from './components/MyProfile/MyProfile';
 import NavLink from './components/NavLink';
 import { fetchMission } from './components/redux/missions/missions';
-import Rocket from './components/Rocket';
+import Rocket from './components/Rockets/Rocket';
 
 function App() {
   const dispatch = useDispatch();

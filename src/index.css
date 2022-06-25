@@ -2,6 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid gray;
 }
 
 .right-section {
@@ -16,15 +17,15 @@ nav {
 
 .nav a {
   text-decoration: none;
-  color: black;
+  color: blue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav a.active {
   text-decoration: underline;
-  color: blue;
 }
 
 .imgPlanet {
   height: auto;
-  width: 80px;
+  width: 50px;
 }
