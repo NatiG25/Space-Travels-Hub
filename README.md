@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Space Travels Hub
-> This application allows users to get a test of an adventure of a lifetime.
+> This is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. All information are real live data from the SpaceX API.
 
 ## Built With
 
-- HTML
+- Redux
 
 - CSS
 
