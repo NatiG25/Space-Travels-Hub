@@ -17,13 +17,13 @@
 
 - React Testing library
 
-- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
+- Lighthouse
 
-- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
+- Webhint
 
-- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
+- Stylelint
 
-- ESlint (A mighty, modern linter that helps you avoid errors and enforce conventions in JavaScript codes)
+- ESlint
 
 ## Getting Started
 
@@ -85,7 +85,7 @@ Feel free to check the issues page.
 
 ## Show your support
 
-Give a star if you like this project!
+Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
