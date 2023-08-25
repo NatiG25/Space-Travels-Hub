@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Space Travels Hub
-> This is a web application, which an API that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. All information is actual live data from the SpaceX API.
+> This is a web application, which uses an API that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. All information is actual live data from the SpaceX API.
 
 ![spaceTravels](https://user-images.githubusercontent.com/86069740/206186603-1760049e-1396-435a-ba7c-82bacc193aba.png)
 
